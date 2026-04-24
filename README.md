@@ -1,13 +1,23 @@
 # Social View - AI Social Media Analyzer
 
+![Dashboard Home](screenshots/dashboard_home.png)
+
 Social View is a deep learning-powered application designed to analyze social media posts. It provides actionable insights, sentiment classification, engagement prognosis for various platforms, and AI-generated hashtag recommendations.
 
 ## 🌟 Features
 - **AI Diagnostic Report**: Get a comprehensive analysis of any social media text using advanced language models.
+  <br/>
+  <img src="screenshots/report_overview.png" width="600" alt="Report Overview"/>
 - **Sentiment Classification**: Detect the primary sentiment (Positive, Negative, Neutral) and its intensity.
 - **Engagement Prognosis**: Predict how well the post will perform across multiple platforms (Twitter, LinkedIn, Instagram, Facebook).
+  <br/>
+  <img src="screenshots/report_platforms.png" width="600" alt="Platforms Prognosis"/>
 - **Hashtag Vectors**: Generate relevant and trending hashtags based on the post's content.
+  <br/>
+  <img src="screenshots/report_hashtags.png" width="600" alt="Hashtag Vectors"/>
 - **User Authentication**: Secure login and registration powered by Firebase.
+  <br/>
+  <img src="screenshots/login_page.png" width="600" alt="Login Page"/>
 
 ## 🛠️ Tech Stack
 - **Frontend**: React 19, Vite, Tailwind CSS, React Router
