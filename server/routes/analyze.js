@@ -32,6 +32,8 @@ You are a social media content analyst. When given a post, analyze it and return
     "Instagram": { "score": 50, "suggestion": "<one line rewrite tip>", "improved_post": "<fully generated visually engaging caption with emojis>" }
   }
 }
+
+CRITICAL INSTRUCTION: You MUST return all THREE platforms (Twitter, LinkedIn, Instagram) in the platform_fit object every single time, regardless of what the user's target platform is.
 `;
 
 router.post('/', async (req, res) => {
@@ -45,7 +47,7 @@ router.post('/', async (req, res) => {
     const response = await groq.chat.completions.create({
       messages: [
         { role: 'system', content: systemPrompt },
-        { role: 'user', content: `Platform: ${platform || 'General'}\nContent:\n${content}` }
+        { role: 'user', content: `Target Platform: ${platform || 'General'} (Analyze for ALL platforms, but give special focus to this target)\nContent:\n${content}` }
       ],
       model: 'llama-3.3-70b-versatile',
       response_format: { type: 'json_object' }
